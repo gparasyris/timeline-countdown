@@ -25,8 +25,14 @@ import styled from "styled-components";
 
 // import './timeline-css.scss';
 import { data } from "../data";
+import { SventechTimelineElement } from "./SventechTimelineElement";
 
 const Test = styled.div`
+  .hidden-anchor {
+    // opacity: 0;
+    // height: 0;
+    display: none;
+  }
   .time {
     font-family: Indy Sans, sans-serif;
     font-size: 17px;
@@ -142,7 +148,7 @@ const Test = styled.div`
       scroll-behavior: smooth;
     }
     .all {
-      height: 92vh;
+      height: 84vh;
       overflow-y: auto;
     }
     .time {
@@ -241,42 +247,51 @@ export default function CustomizedTimeline() {
 
   // timerCycle();
 
+  const handleHiddenScroll = (id) => {
+    document.getElementById(id)?.click();
+  };
+
   return (
     <>
       <Box>
         <Test>
           {data &&
             data.map((event, idx) => (
-              <div className="all" id={`${idx}-test`}>
-                <div className="time">
-                  <div className="time-content">
-                    <a href={`#${idx}-test`}>18 hours ago</a>
-                    <a />
-                    {/* <span>20/09/2022</span> */}
-                  </div>
-                </div>
-                <div className="content">
-                  <div className="header">
-                    <h3>Here is the title</h3>
-                  </div>
-                  <div className="main">
-                    <h3 className="header">subheadng</h3>
-                    <p>article content</p>
-                  </div>
-                </div>
-                <div className="info">
-                  <div className="name">Alan Shore</div>
-                  <div className="date">20th of June, 20221</div>
-                </div>
-              </div>
+              <SventechTimelineElement key={idx} idx={idx} />
+              // <div className="all" id={`${idx}-test`}>
+              //   <div className="time">
+              //     <div className="time-content">
+              //       <a href={`#${idx-1}-info`}>18 hours ago</a>
+              //       <a />
+              //     </div>
+              //   </div>
+              //   <div className="content">
+              //     <div className="header">
+              //       <h3>Here is the title</h3>
+              //     </div>
+              //     <div className="main">
+              //       <h3 className="header">subheadng</h3>
+              //       <p>article content</p>
+              //     </div>
+              //   </div>
+              //   <div
+              //     id={`${idx}-info`}
+              //     className="info"
+              //     onClick={() => handleHiddenScroll(`${idx}-hidden-test`)}
+              //   >
+              //     <a
+              //       id={`${idx}-hidden-test`}
+              //       className="hidden-anchor"
+              //       href={`#${idx-1}-info`}
+              //     />
+              //     <div className="name">Alan Shore</div>
+              //     <div className="date">20th of June, 20221</div>
+              //   </div>
+              // </div>
             ))}
         </Test>
       </Box>
-      <Box>
-        {/* <div>{timer}</div>
-
-      <Timer tt={time} /> */}
-        {/* <Stopwatch /> */}
+      {/* <Box>
         <Timeline>
           {data &&
             data.map((event, idx) => (
@@ -298,38 +313,19 @@ export default function CustomizedTimeline() {
                 </TimelineOppositeContent>
                 <TimelineSeparator style={{ zIndex: 2 }}>
                   <TimelineConnector />
-                  {/* <TimelineConnector sx={{ bgcolor: 'secondary.main', height: `${(event.next?.days || 1)*2}rem` }} /> */}
-                  {/* <TimelineConnector sx={{ bgcolor: 'secondary.main', height: `${(event.next?.days || 1)*2}rem` }} >
-                <TimelineContent sx={{ py: '12px', px: 2, display: 'flex', justifyContent: 'center', flexDirection: 'column', height: '100%', width: '200px' }}>
-                <Typography>
-                 {
-                 event.next?.days ? `${event.next?.days} days later` 
-                                  : (event.next?.hours ? `${event.next?.hours} hours later` 
-                                                       : ( event.next?.minutes ? `${event.next?.minutes} minutes later`
-                                                                               : ''
-                                                          )
-                                     )
-                }
-                </Typography>
-              </TimelineContent>
-                </TimelineConnector> */}
                   <TimelineDot
                     color={getColour(event?.isRequest, event?.isResponse)}
                   >
                     {mapper[event.type]}
                   </TimelineDot>
                 </TimelineSeparator>
-                {/* <TimelineContent sx={{ py: '12px', px: 2, display: 'flex', justifyContent: 'flex-end', flexDirection: 'column', margin:'0 0 6px 0' }}> */}
                 <TimelineContent sx={{ py: "12px", px: 2 }}>
-                  {/* <Typography component="span">
-                  {event.title}
-                </Typography> */}
                   <Typography>{event.content}</Typography>
                 </TimelineContent>
               </TimelineItem>
             ))}
         </Timeline>
-      </Box>
+      </Box> */}
     </>
   );
 }
