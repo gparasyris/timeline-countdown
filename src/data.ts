@@ -1,0 +1,131 @@
+export const data = [
+  {
+    date: "Sunday, 6th of May",
+    type: "linkedin",
+    title: "",
+    content: "Commented on Linkedin",
+    isRequest: true,
+    isResponse: false,
+    next: {
+      days: 5,
+      hours: 0,
+      minutes: 0,
+    },
+  },
+  {
+    date: "Sunday, 1st of May",
+    type: "twitter",
+    title: "",
+    content: "Instant Reply - silence",
+    isRequest: true,
+    isResponse: false,
+    next: {
+      days: 0,
+      hours: 0,
+      minutes: 2,
+    },
+  },
+  {
+    date: "May, 1st of May",
+    type: "twitter",
+    title: "",
+    content: "reply",
+    isRequest: false,
+    isResponse: true,
+    next: {
+      days: 2,
+      hours: 0,
+      minutes: 0,
+    },
+  },
+  {
+    date: "Thursday, 29th of April",
+    type: "facebook",
+    title: "",
+    content: "Instant Reply - silence",
+    isRequest: true,
+    isResponse: false,
+    next: {
+      days: 0,
+      hours: 0,
+      minutes: 2,
+    },
+  },
+  {
+    date: "Thursday, 29th of April",
+    type: "facebook",
+    title: "",
+    content: "response in facebook",
+    isRequest: false,
+    isResponse: true,
+    next: {
+      days: 1,
+      hours: 0,
+      minutes: 0,
+    },
+  },
+  {
+    date: "Thursday, 28th of April",
+    type: "twitter",
+    title: "",
+    content:
+      'Connect through messenger in twitter, providing the ticket number I got when I submitted it under "Serious Ilnesss"',
+    isRequest: true,
+    isResponse: false,
+    next: {
+      days: 6,
+      hours: 0,
+      minutes: 0,
+    },
+  },
+  {
+    date: "Thursday, 22th of April",
+    type: "facebook",
+    title: "",
+    content:
+      'Connect through messenger in facebook, providing the ticket number I got when I submitted it under "Serious Ilnesss"',
+    isRequest: true,
+    isResponse: false,
+  },
+  {
+    date: "Thursday, 18th of April",
+    type: "plane",
+    title: "",
+    content: "Outbound flight took place",
+    isRequest: false,
+    isResponse: false,
+    next: {
+      days: 4,
+      hours: 0,
+      minutes: 0,
+    },
+  },
+  {
+    date: "Thursday, 15th of April",
+    type: "mail",
+    title: "Repeat",
+    content:
+      "Submitted Form suggested by customer support, respose time should 1 weel - Easyjet *Never* responded.",
+    isRequest: true,
+    isResponse: false,
+    next: {
+      days: 3,
+      hours: 0,
+      minutes: 0,
+    },
+  },
+  {
+    date: "Thursday, 15th of April",
+    type: "phone",
+    title: "Repeat",
+    content:
+      'Initial call | called the customer support to ask for directions since I had covid and could\'t fly, asked if I could reschedule the flights without fees - website claims this is at the discretion of the company - or get a voucher, response was "send a form w/ Serious illness as topic"',
+    isRequest: true,
+    isResponse: false,
+    next: {
+      days: 0,
+      hours: 0,
+      minutes: 30,
+    },
+  },
+];
