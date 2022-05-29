@@ -9,9 +9,10 @@ import throttle from "lodash.throttle";
  */
 export default function useVisibility<Element extends HTMLElement>(
   offset = 0,
+  initialState = false,
   throttleMilliseconds = 100
 ): [Boolean, RefObject<Element>] {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(initialState);
   const currentElement = createRef<Element>();
 
   const onScroll = throttle(() => {

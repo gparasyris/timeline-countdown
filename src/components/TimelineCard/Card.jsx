@@ -3,8 +3,6 @@ import styled from "styled-components";
 import { data } from "../data";
 import useVisibility from "../utils/visibility";
 
-import { TimeBox } from "./TimelineCard";
-
 const Test = styled.div`
   .hidden-anchor {
     // opacity: 0;
@@ -169,10 +167,6 @@ export const SventechTimelineElement = ({ idx }) => {
     if (id < 0) id = 0;
     document.getElementById(id)?.click();
   };
-  // const getHref = (idx) => (idx === 0 ? `#timeline` : `#${idx - 1}-info`);
-  const getHref = (idx) => (idx === 0 ? `timeline` : `${idx - 1}-info`);
-
-  const [isFirstVisible, firstRef] = useVisibility(50, idx === 0);
 
   const smoothScrollTo = (e, id) => {
     e.preventDefault();
@@ -182,6 +176,10 @@ export const SventechTimelineElement = ({ idx }) => {
       behavior: "smooth", // smooth scroll
     });
   };
+
+  const getHref = (idx) => (idx === 0 ? `#timeline` : `#${idx - 1}-info`);
+
+  const [isFirstVisible, firstRef] = useVisibility(50, idx === 0);
 
   return (
     <Test>

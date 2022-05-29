@@ -253,43 +253,43 @@ export default function CustomizedTimeline() {
 
   return (
     <>
-      <Box>
-        <Test>
-          {data &&
-            data.map((event, idx) => (
-              <SventechTimelineElement key={idx} idx={idx} />
-              // <div className="all" id={`${idx}-test`}>
-              //   <div className="time">
-              //     <div className="time-content">
-              //       <a href={`#${idx-1}-info`}>18 hours ago</a>
-              //       <a />
-              //     </div>
-              //   </div>
-              //   <div className="content">
-              //     <div className="header">
-              //       <h3>Here is the title</h3>
-              //     </div>
-              //     <div className="main">
-              //       <h3 className="header">subheadng</h3>
-              //       <p>article content</p>
-              //     </div>
-              //   </div>
-              //   <div
-              //     id={`${idx}-info`}
-              //     className="info"
-              //     onClick={() => handleHiddenScroll(`${idx}-hidden-test`)}
-              //   >
-              //     <a
-              //       id={`${idx}-hidden-test`}
-              //       className="hidden-anchor"
-              //       href={`#${idx-1}-info`}
-              //     />
-              //     <div className="name">Alan Shore</div>
-              //     <div className="date">20th of June, 20221</div>
-              //   </div>
-              // </div>
-            ))}
-        </Test>
+      <Box id="timeline" style={{ marginTop: "-32px", paddingTop: "32px" }}>
+        {/* <Test> */}
+        {data &&
+          data.map((event, idx) => (
+            <SventechTimelineElement key={idx} idx={idx} />
+            // <div className="all" id={`${idx}-test`}>
+            //   <div className="time">
+            //     <div className="time-content">
+            //       <a href={`#${idx-1}-info`}>18 hours ago</a>
+            //       <a />
+            //     </div>
+            //   </div>
+            //   <div className="content">
+            //     <div className="header">
+            //       <h3>Here is the title</h3>
+            //     </div>
+            //     <div className="main">
+            //       <h3 className="header">subheadng</h3>
+            //       <p>article content</p>
+            //     </div>
+            //   </div>
+            //   <div
+            //     id={`${idx}-info`}
+            //     className="info"
+            //     onClick={() => handleHiddenScroll(`${idx}-hidden-test`)}
+            //   >
+            //     <a
+            //       id={`${idx}-hidden-test`}
+            //       className="hidden-anchor"
+            //       href={`#${idx-1}-info`}
+            //     />
+            //     <div className="name">Alan Shore</div>
+            //     <div className="date">20th of June, 20221</div>
+            //   </div>
+            // </div>
+          ))}
+        {/* </Test> */}
       </Box>
       {/* <Box>
         <Timeline>
