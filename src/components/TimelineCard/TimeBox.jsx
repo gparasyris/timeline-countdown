@@ -33,6 +33,29 @@ const Container = styled.div`
     left: 27px;
     top: 0;
   }
+
+  @media only screen and (max-width: 600px) {
+    // scroll-behavior: smooth;
+    // * {
+    //   scroll-behavior: smooth;
+    // }
+    // .all {
+    //   height: 84vh;
+    //   overflow-y: auto;
+    //   &.hide {
+    //     opacity: 0.4;
+    //   }
+    // }
+    // .time {
+    height: 10%;
+    // }
+    // .content {
+    //   height: 80%;
+    // }
+    // .info {
+    //   height: 10%;
+    // }
+  }
 `;
 
 const Content = styled.div`
@@ -47,22 +70,8 @@ const Content = styled.div`
   // }
 `;
 
-export const TimeBox = ({ children }) => {
-  return (
-    // <Container onClick={() => handleHiddenScroll(`${idx}-top-hidden-test`)}>
-    <Container>
-      {/* <div className="time-content">
-        <a
-          id={`${idx}-top-hidden-test`}
-          href=""
-          onClick={(e) => smoothScrollTo(e, getHref(idx))}
-        >
-          18 hours ago
-        </a>
-      </div> */}
-      {children}
-    </Container>
-  );
+export const TimeBox = ({ children, onClick }) => {
+  return <Container onClick={onClick}>{children}</Container>;
 };
 
 TimeBox.Content = Content;
