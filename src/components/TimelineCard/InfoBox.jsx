@@ -1,7 +1,5 @@
 import { useState } from "react";
 import styled from "styled-components";
-// import { data } from "../data";
-// import useVisibility from "../utils/visibility";
 
 const Container = styled.div`
   display: flex;
@@ -16,26 +14,7 @@ const Container = styled.div`
   justify-content: space-between;
 
   @media only screen and (max-width: 600px) {
-    // scroll-behavior: smooth;
-    // * {
-    //   scroll-behavior: smooth;
-    // }
-    // .all {
-    //   height: 84vh;
-    //   overflow-y: auto;
-    //   &.hide {
-    //     opacity: 0.4;
-    //   }
-    // }
-    // .time {
     height: 10%;
-    // }
-    // .content {
-    //   height: 80%;
-    // }
-    // .info {
-    //   height: 10%;
-    // }
   }
 `;
 

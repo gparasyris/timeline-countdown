@@ -13,26 +13,7 @@ const Container = styled.div`
   border-top-right-radius: 6px;
 
   @media only screen and (max-width: 600px) {
-    // scroll-behavior: smooth;
-    // * {
-    //   scroll-behavior: smooth;
-    // }
-    // .all {
-    //   height: 84vh;
-    //   overflow-y: auto;
-    //   &.hide {
-    //     opacity: 0.4;
-    //   }
-    // }
-    // .time {
-    // height: 10%;
-    // }
-    // .content {
     height: 80%;
-    // }
-    // .info {
-    //   height: 10%;
-    // }
   }
 `;
 

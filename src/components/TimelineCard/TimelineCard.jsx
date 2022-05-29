@@ -4,8 +4,6 @@ import { ContentBox } from "./ContentBox";
 import { InfoBox } from "./InfoBox";
 import { TimeBox } from "./TimeBox";
 
-// import { InfoBox, TimeBox, ContentBox } from "./index";
-
 const Container = styled.div`
   transition: all ease-in-out 0.2s;
 
