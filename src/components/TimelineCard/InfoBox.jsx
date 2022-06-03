@@ -4,7 +4,9 @@ import styled from "styled-components";
 const Container = styled.div`
   display: flex;
   background-color: #fff;
-  border: 1px solid #000;
+  background: #e4e4e4;
+  // border: 1px solid #000;
+  // border: 1px solid #F7F8F9;
   border-top: 0;
   padding: 20px 20px 19px;
   border-bottom-left-radius: 6px;
@@ -12,7 +14,6 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background: #e4e4e4;
 
   @media only screen and (max-width: 600px) {
     height: 10%;

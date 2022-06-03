@@ -6,10 +6,10 @@ import PhoneInTalkIcon from "@mui/icons-material/PhoneInTalk";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import { Box } from "@mui/material";
 import * as React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 // import './timeline-css.scss';
-import { data } from "../data";
+// import { data } from "../data";
 import { smoothScrollTo } from "../utils/smooth-scroll";
 import Stopwatch from "./StopWatch";
 import { TimelineCard } from "./TimelineCard";
@@ -47,6 +47,7 @@ const initialTime = 10000000;
 export default function CustomizedTimeline() {
   const [time, setTime] = useState(initialTime);
   const [timer, setTimer] = useState("");
+  const [data, setData] = useState([]);
 
   // const increaseTimeBy = (add) => setTime(time + add);
 
@@ -99,6 +100,26 @@ export default function CustomizedTimeline() {
   // timerCycle();
 
   const getHref = (idx) => (idx === 0 ? `timeline` : `${idx - 1}-info`);
+
+  useEffect(() => {
+    // key6teTirIEFrarrQ
+    fetch(
+      "https://api.airtable.com/v0/appj4h0fv2GLe4Bz6/Communication%20events?api_key=key6teTirIEFrarrQ"
+    )
+      .then((resp) => resp.json())
+      .then((res) => {
+        setData(
+          res.records
+            .sort((a, b) =>
+              new Date(a.createdTime) > new Date(b.createdTime) ? 1 : -1
+            )
+            .map(({ fields }) => fields)
+        );
+      })
+      .catch((err) => {
+        // Error :(
+      });
+  }, []);
 
   return (
     <>

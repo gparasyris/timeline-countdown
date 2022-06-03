@@ -16,6 +16,10 @@ const Container = styled.div`
   }
 `;
 
+const CardContainer = styled.div`
+  box-shadow: 0 0 1px 0 rgb(8 11 14 / 6%), 0 16px 16px -1px rgb(8 11 14 / 10%);
+`;
+
 const Time = ({ children, ...rest }) => (
   <TimeBox {...rest}>
     AAAAAAAAAAA
@@ -45,15 +49,17 @@ export const TimelineCard = ({ children, idx }) => {
       id={`${idx}-test`}
     >
       {timebox}
-      <ContentBox>
-        {header}
-        <ContentBox.Content>
-          {subheader}
-          {article}
-          <ContentBox.Anchor ref={firstRef} />
-        </ContentBox.Content>
-      </ContentBox>
-      {info}
+      <CardContainer>
+        <ContentBox>
+          {header}
+          <ContentBox.Content>
+            {subheader}
+            {article}
+            <ContentBox.Anchor ref={firstRef} />
+          </ContentBox.Content>
+        </ContentBox>
+        {info}
+      </CardContainer>
     </Container>
   );
 };
