@@ -15,7 +15,7 @@
     "dayjs": "^1.11.2",
     "install": "^0.13.0",
     "lodash.throttle": "4.1.1",
-    "node-sass": "4.14.1",
+    "node-sass": "^7.0.1",
     "react": "latest",
     "react-compass": "^0.1.0",
     "react-dom": "latest",
@@ -33,9 +33,6 @@
   },
   "resolutions": {
     "react-error-overlay": "6.0.9"
-  },
-  "engines": {
-    "node": "14.17.0"
   },
   "browserslist": {
     "production": [
