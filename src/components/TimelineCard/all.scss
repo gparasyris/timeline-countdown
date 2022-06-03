@@ -1,7 +1,10 @@
 .flip-clock {
   // text-align: center;
   perspective: 400px;
-  // margin: 20px auto;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 
   *,
   *:before,
@@ -16,7 +19,10 @@
 }
 
 .flip-clock__slot {
-  font-size: 1rem; // label
+  font-size: 1rem;
+  /* padding: 2px 8px; */
+  font-weight: bold;
+  text-align: center;
 }
 
 $halfHeight: 0.72em;
@@ -26,7 +32,7 @@ $borderRadius: 0.15em;
   display: block;
   position: relative;
   padding-bottom: $halfHeight;
-  font-size: 3rem;
+  font-size: 2rem;
   line-height: 0.95;
 }
 
@@ -37,7 +43,9 @@ $borderRadius: 0.15em;
   display: block;
   height: $halfHeight;
   color: #ccc;
+  // color: #fff;
   background: #222;
+  // background: #F56203; //FF6601
   padding: 0.25em 0.25em;
   border-radius: $borderRadius $borderRadius 0 0;
   backface-visiblity: hidden;
@@ -52,7 +60,8 @@ $borderRadius: 0.15em;
   top: 50%;
   left: 0;
   border-top: solid 1px #000;
-  background: #393939;
+  background: #393939; //FF6601
+  // background: #FF6601; //FF6601 // FF7B00
   border-radius: 0 0 $borderRadius $borderRadius;
   pointer-events: none;
   overflow: hidden;
@@ -123,5 +132,11 @@ $borderRadius: 0.15em;
     opacity: 0.99;
     transform: rotateX(0deg);
     z-index: 5;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .card {
+    font-size: 3rem;
   }
 }

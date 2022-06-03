@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Container = styled.div`
   display: flex;
   background-color: #fff;
-  border: 1px solid #888;
+  border: 1px solid #000;
   border-top: 0;
   padding: 20px 20px 19px;
   border-bottom-left-radius: 6px;
@@ -12,6 +12,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  background: #e4e4e4;
 
   @media only screen and (max-width: 600px) {
     height: 10%;
@@ -26,7 +27,7 @@ const Name = styled.div`
 
 const DateInfo = styled.div`
   font-size: 14px;
-  color: #888;
+  color: #000;
   font-weight: 400;
 `;
 

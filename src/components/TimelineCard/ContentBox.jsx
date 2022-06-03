@@ -7,10 +7,11 @@ const Container = styled.div`
   position: relative;
   padding: 20px;
   position: relative;
-  border: 1px solid #888;
+  border: 1px solid #000;
   font-weight: 300;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
+  background: #fff;
 
   @media only screen and (max-width: 600px) {
     height: 80%;

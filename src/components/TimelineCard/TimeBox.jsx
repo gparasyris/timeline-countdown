@@ -6,7 +6,7 @@ const Container = styled.div`
   font-size: 17px;
   line-height: 23px;
   font-weight: 700;
-  color: #646464;
+  color: #000;
   display: flex;
   position: relative;
   align-items: center;
@@ -16,7 +16,7 @@ const Container = styled.div`
     width: 16px;
     height: 16px;
     margin-right: 8px;
-    border: 2px solid #bdbdbd;
+    border: 2px solid #000;
     background: #fff;
     border-radius: 50%;
     z-index: 1;
@@ -27,7 +27,7 @@ const Container = styled.div`
     position: absolute;
     width: 2px;
     height: 100%;
-    background: #888;
+    background: #000;
     left: 27px;
     top: 0;
   }

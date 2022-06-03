@@ -5,8 +5,9 @@ import { DisplayCard } from "./DisplayCard";
 import { TimeContainer } from "./TimelineCard/TimeContainer";
 
 const Clock = styled.div`
-  width: fit-content;
-  margin: auto;
+  // width: fit-content;
+  // margin: auto;
+  width: 100%
 `;
 
 export const StopwatchDisplay = ({ values, formatTime }) => {

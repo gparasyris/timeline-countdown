@@ -1,10 +1,18 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import StopwatchDisplay from "./StopWatchDisplay.jsx";
+import dayjs from "dayjs";
+import duration from "dayjs/plugin/duration";
+import relativeTime from "dayjs/plugin/relativeTime";
+
+dayjs.extend(duration);
+dayjs.extend(relativeTime);
+// dayjs.extend(duration);
+// dayjs.extend(relativeTime);
 // import StopwatchHistory from './StopwatchHistory.jsx';
 let watch;
 let globalState = {};
-export const Stopwatch = (date = "2022-04-15") => {
+export const Stopwatch = ({ date = "2022-04-15", ...rest }) => {
   // constructor(props) {
   // super(props);
 
@@ -144,12 +152,37 @@ export const Stopwatch = (date = "2022-04-15") => {
 
   // render() {
 
+  // let duration = require('dayjs/plugin/duration')
+  // dayjs.extend(duration)
+  // let relativeTime = require('dayjs/plugin/relativeTime')
+  // dayjs.extend(relativeTime)
+
+  //         dayjs(date).to(dayjs(date).add(currentEstimate.estimate_validation_date, 'd'), true)
+
   useEffect(() => {
     start();
   }, []);
 
   return (
-    <div className={"stopwatch"}>
+    <div
+      className={"stopwatch"}
+      {...rest}
+      // style={{
+      //   background: "rgb(255, 86, 31)",
+      //   background:
+      //     "linear-gradient(90deg, rgba(255,86,31,1) 0%, rgba(245,98,3,1) 19%, rgba(255,103,30,1) 100%)",
+      // }}
+    >
+      {/* <div>{(dayjs().to(dayjs(date)), true)}</div> */}
+      {/* {dayjs().diff(dayjs(date), "month", true).humanize()} */}
+      {/* {dayjs.duration(1, "minutes").humanize()}
+      {dayjs(date).to(
+        dayjs(date).add(
+          dayjs().diff(dayjs(date), "days", true),
+          "d"
+        ),
+        true
+      )} */}
       <StopwatchDisplay values={{ ...globalState }} formatTime={formatTime} />
     </div>
   );

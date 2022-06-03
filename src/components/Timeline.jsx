@@ -103,15 +103,12 @@ export default function CustomizedTimeline() {
   return (
     <>
       <Box id="timeline" style={{ marginTop: "-32px", paddingTop: "32px" }}>
-        <Stopwatch />
-        <TimelineCard>
+        {/* <TimelineCard>
           <TimelineCard.Separator>20/01/2014</TimelineCard.Separator>
           <TimelineCard.Content>
             <TimelineCard.Header>header</TimelineCard.Header>
             <TimelineCard.SubHeader>subheadng</TimelineCard.SubHeader>
             <TimelineCard.Article>
-              {/* <TweetEmbed id="692527862369357824" placeholder={"loading"} /> */}
-              <TweetEmbed id="1532435757209513984" placeholder={"loading"} />
               <TwitterTweetEmbed tweetId={"933354946111705097"} />
             </TimelineCard.Article>
           </TimelineCard.Content>
@@ -119,7 +116,7 @@ export default function CustomizedTimeline() {
             <TimelineCard.Footer.Left />
             <TimelineCard.Footer.Right>20/01/2014</TimelineCard.Footer.Right>
           </TimelineCard.Footer>
-        </TimelineCard>
+        </TimelineCard> */}
         {data &&
           data.map((event, idx) => (
             <TimelineCard key={idx} idx={idx}>

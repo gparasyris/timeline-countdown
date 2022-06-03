@@ -51,7 +51,7 @@ export const DisplayCard = ({ id, value, label }) => {
 
   return (
     <span id={id} className="flip-clock__piece flip">
-      <span className="flip-clock__slot">{label}</span>
+      <div className="flip-clock__slot">{label}</div>
       <b className="flip-clock__card card">
         <b className="card__top">{currentValue}</b>
         <b className="card__bottom"></b>
