@@ -11,7 +11,21 @@ import styled from "styled-components";
 // import './timeline-css.scss';
 import { data } from "../data";
 import { smoothScrollTo } from "../utils/smooth-scroll";
+import Stopwatch from "./StopWatch";
 import { TimelineCard } from "./TimelineCard";
+import TweetEmbed from "react-tweet-embed";
+import {
+  TwitterTimelineEmbed,
+  TwitterShareButton,
+  TwitterFollowButton,
+  TwitterHashtagButton,
+  TwitterMentionButton,
+  TwitterTweetEmbed,
+  TwitterMomentShare,
+  TwitterDMButton,
+  TwitterVideoEmbed,
+  TwitterOnAirButton,
+} from "react-twitter-embed";
 
 const mapper = {
   facebook: <FacebookIcon />,
@@ -89,6 +103,23 @@ export default function CustomizedTimeline() {
   return (
     <>
       <Box id="timeline" style={{ marginTop: "-32px", paddingTop: "32px" }}>
+        <Stopwatch />
+        <TimelineCard>
+          <TimelineCard.Separator>20/01/2014</TimelineCard.Separator>
+          <TimelineCard.Content>
+            <TimelineCard.Header>header</TimelineCard.Header>
+            <TimelineCard.SubHeader>subheadng</TimelineCard.SubHeader>
+            <TimelineCard.Article>
+              {/* <TweetEmbed id="692527862369357824" placeholder={"loading"} /> */}
+              <TweetEmbed id="1532435757209513984" placeholder={"loading"} />
+              <TwitterTweetEmbed tweetId={"933354946111705097"} />
+            </TimelineCard.Article>
+          </TimelineCard.Content>
+          <TimelineCard.Footer>
+            <TimelineCard.Footer.Left />
+            <TimelineCard.Footer.Right>20/01/2014</TimelineCard.Footer.Right>
+          </TimelineCard.Footer>
+        </TimelineCard>
         {data &&
           data.map((event, idx) => (
             <TimelineCard key={idx} idx={idx}>

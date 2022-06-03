@@ -7,7 +7,8 @@ import throttle from "lodash.throttle";
  * @param {number} offset - Number of pixels up to the observable element from the top
  * @param {number} throttleMilliseconds - Throttle observable listener, in ms
  */
-export default function useVisibility<Element extends HTMLElement>(
+// export default function useVisibility<Element extends HTMLElement>(
+export default function useVisibility(
   offset = 0,
   initialState = false,
   throttleMilliseconds = 100

@@ -39,7 +39,7 @@ const Anchor = styled.div`
   opacity: 0;
 `;
 
-const Article = styled.p`
+const Article = styled.div`
   display: block;
   margin-block-start: 1em;
   margin-block-end: 1em;
