@@ -139,7 +139,7 @@ export default function CustomizedTimeline() {
           </TimelineCard.Footer>
         </TimelineCard> */}
       {data && (
-        <Box id="timeline" style={{ marginTop: "-32px", paddingTop: "32px" }}>
+        <Box id="timeline" class="fade-page" style={{ marginTop: "-32px", paddingTop: "32px" }}>
           {data.map((event, idx) => (
             <TimelineCard key={idx} idx={idx}>
               <TimelineCard.Separator
