@@ -123,8 +123,8 @@ export default function CustomizedTimeline() {
 
   return (
     <>
-      <Box id="timeline" className="fade-page" style={{ marginTop: "-32px", paddingTop: "32px" }}>
-        {/* <TimelineCard>
+      {/* <Box id="timeline" style={{ marginTop: "-32px", paddingTop: "32px" }}> */}
+      {/* <TimelineCard>
           <TimelineCard.Separator>20/01/2014</TimelineCard.Separator>
           <TimelineCard.Content>
             <TimelineCard.Header>header</TimelineCard.Header>
@@ -138,8 +138,9 @@ export default function CustomizedTimeline() {
             <TimelineCard.Footer.Right>20/01/2014</TimelineCard.Footer.Right>
           </TimelineCard.Footer>
         </TimelineCard> */}
-        {data &&
-          data.map((event, idx) => (
+      {data && (
+        <Box id="timeline" style={{ marginTop: "-32px", paddingTop: "32px" }}>
+          {data.map((event, idx) => (
             <TimelineCard key={idx} idx={idx}>
               <TimelineCard.Separator
                 onClick={(e) => smoothScrollTo(e, getHref(idx))}
@@ -162,7 +163,33 @@ export default function CustomizedTimeline() {
               </TimelineCard.Footer>
             </TimelineCard>
           ))}
-      </Box>
+        </Box>
+      )}
+
+      {/* // data.map((event, idx) => (
+          //   <TimelineCard key={idx} idx={idx}>
+          //     <TimelineCard.Separator
+          //       onClick={(e) => smoothScrollTo(e, getHref(idx))}
+          //     >
+          //       {event.date}
+          //     </TimelineCard.Separator>
+          //     <TimelineCard.Content>
+          //       <TimelineCard.Header>{mapper[event.type]}</TimelineCard.Header>
+          //       <TimelineCard.SubHeader>subheadng</TimelineCard.SubHeader>
+          //       <TimelineCard.Article>{event.content}</TimelineCard.Article>
+          //     </TimelineCard.Content>
+          //     <TimelineCard.Footer
+          //       id={`${idx}-info`}
+          //       onClick={(e) => smoothScrollTo(e, getHref(idx))}
+          //     >
+          //       <TimelineCard.Footer.Left />
+          //       <TimelineCard.Footer.Right>
+          //         {event.date}
+          //       </TimelineCard.Footer.Right>
+          //     </TimelineCard.Footer>
+          //   </TimelineCard>
+          // ))}
+      // </Box> */}
     </>
   );
 }
