@@ -25,11 +25,14 @@ const Container = styled.div`
     content: "";
     display: block;
     position: absolute;
-    width: 2px;
+    width: 0px;
     height: 100%;
-    background: #000;
+    // background: #000;
     left: 27px;
     top: 0;
+    // border: 5px dotted black;
+    border-left-style: dotted;
+    border-left-width: 2px;
   }
 
   @media only screen and (max-width: 600px) {

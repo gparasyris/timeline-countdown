@@ -18,6 +18,9 @@ const Container = styled.div`
 
 const CardContainer = styled.div`
   box-shadow: 0 0 1px 0 rgb(8 11 14 / 6%), 0 16px 16px -1px rgb(8 11 14 / 10%);
+  @media only screen and (max-width: 600px) {
+    height: 90%;
+  }
 `;
 
 const Time = ({ children, ...rest }) => (

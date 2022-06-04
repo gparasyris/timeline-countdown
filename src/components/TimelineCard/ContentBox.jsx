@@ -15,7 +15,7 @@ const Container = styled.div`
   background: #fff;
 
   @media only screen and (max-width: 600px) {
-    height: 80%;
+    height: 90%;
   }
 `;
 

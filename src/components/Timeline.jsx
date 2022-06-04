@@ -123,7 +123,7 @@ export default function CustomizedTimeline() {
 
   return (
     <>
-      <Box id="timeline" style={{ marginTop: "-32px", paddingTop: "32px" }}>
+      <Box id="timeline" className="fade-page" style={{ marginTop: "-32px", paddingTop: "32px" }}>
         {/* <TimelineCard>
           <TimelineCard.Separator>20/01/2014</TimelineCard.Separator>
           <TimelineCard.Content>

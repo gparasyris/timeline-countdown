@@ -43,6 +43,7 @@ $borderRadius: 0.15em;
   display: block;
   height: $halfHeight;
   color: #ccc;
+  // color: #F56203;
   // color: #fff;
   background: #222;
   // background: #F56203; //FF6601
@@ -56,11 +57,12 @@ $borderRadius: 0.15em;
 
 .card__bottom {
   color: #fff;
+  // color: #F56203;
   position: absolute;
   top: 50%;
   left: 0;
   border-top: solid 1px #000;
-  background: #393939; //FF6601
+  background: #000; //FF6601
   // background: #FF6601; //FF6601 // FF7B00
   border-radius: 0 0 $borderRadius $borderRadius;
   pointer-events: none;
@@ -139,4 +141,34 @@ $borderRadius: 0.15em;
   .card {
     font-size: 3rem;
   }
+}
+
+
+.fade-page
+{
+// width:100px;
+// height:100px;
+// background:red;
+// top: 20px;
+// top: -20px;
+// margin-top: 20px;
+position:relative;
+animation:mymove 1s ease-out forwards;
+/* animation-iteration-count:3; */
+
+/* Safari and Chrome */
+-webkit-animation:mymove 1s;
+/* -webkit-animation-iteration-count:3; */
+}
+
+@keyframes mymove
+{ 
+  from {top:-20px; opacity: 0;}
+  to { top:00px; opacity: 1}
+}
+
+@-webkit-keyframes mymove /* Safari and Chrome */
+{
+  from {top:0px; opacity: 0;}
+  to {top:200px; opacity: 1;}
 }
